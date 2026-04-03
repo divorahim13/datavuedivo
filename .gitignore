@@ -1,0 +1,45 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# DataVue Backups & Temporary Files
+*_backup/
+src_backup*/
+*.bak
+*.json.bak
+*.js.bak
+
+# Search & Scraping scripts
+geticons.*
+geticons2.*
+getaws.*
+find_prompt.py
+
+# Data Files
+icons.json
+missing_icons.json
+aws.json
+
+# Documentation
+DataVue_Interview_Guide.md
