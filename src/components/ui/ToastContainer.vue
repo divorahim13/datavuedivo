@@ -17,7 +17,7 @@ const uiStore = useUiStore();
       leave-to-class="-translate-y-2 opacity-0 scale-95"
     >
       <div 
-        v-for="toast in uiStore.toasts" 
+        v-for="toast in uiStore.activeToasts" 
         :key="toast.id"
         class="bg-card border border-border shadow-2xl rounded-2xl p-4 min-w-[320px] pointer-events-auto flex items-center gap-3"
       >

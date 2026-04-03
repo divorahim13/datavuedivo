@@ -20,7 +20,7 @@ const TrendIcon = computed(() => props.trend === 'up' ? TrendingUp : TrendingDow
     <!-- Top Label -->
     <div class="flex items-center justify-between mb-4">
       <div class="flex items-center gap-2">
-        <component :is="icons[iconName as keyof typeof icons] || Tag" class="w-4 h-4 text-[#9ca3af]" />
+        <component :is="(icons[iconName as keyof typeof icons] || Tag) as any" class="w-4 h-4 text-[#9ca3af]" />
         <h3 class="text-[12px] font-bold text-[#6b7280] uppercase tracking-wider">{{ title }}</h3>
       </div>
       <div class="w-6 h-6 flex items-center justify-center rounded-md hover:bg-[#f3f4f6] cursor-pointer text-[#9ca3af] transition-colors">

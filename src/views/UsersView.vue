@@ -3,7 +3,7 @@ import { ref, computed } from 'vue';
 import { useUsersStore } from '../stores/users';
 import { Search, Filter as FilterIcon, Edit2, Trash2, ChevronDown } from 'lucide-vue-next';
 import { useDebounceFn } from '@vueuse/core';
-import type { UserRecord } from '../types/dashboard';
+
 
 const store = useUsersStore();
 
@@ -100,7 +100,7 @@ const getAvatarColor = (initials: string) => {
               <td colspan="5" class="py-12 text-center text-[#6b7280] text-sm">No users found.</td>
             </tr>
             <tr 
-              v-for="(user, index) in paginatedUsers" 
+              v-for="user in paginatedUsers" 
               :key="user.id" 
               class="transition-colors group hover:bg-[#f9fafb]"
             >

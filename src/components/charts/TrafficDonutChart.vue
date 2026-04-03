@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import VChart from 'vue-echarts';
 import { use } from 'echarts/core';
 import { CanvasRenderer } from 'echarts/renderers';
@@ -24,7 +24,7 @@ const props = defineProps<{
   data: TrafficSource[];
 }>();
 
-const chartRef = ref<InstanceType<typeof VChart> | null>(null);
+
 
 const totalValue = computed(() => {
   if (!props.data) return '0';
@@ -122,7 +122,7 @@ const chartOption = computed(() => {
     </div>
     
     <div class="w-full h-[220px]">
-      <VChart ref="chartRef" :option="chartOption" autoresize />
+      <VChart :option="chartOption" autoresize />
     </div>
 
     <div class="mt-4 flex flex-col gap-4">

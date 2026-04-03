@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { 
   LayoutDashboard, Box, ShoppingCart, Users, MessageSquare, 
-  Mail, BarChart3, Link, Activity, Shield, UserCircle, Settings,
-  LogOut
+  Mail, BarChart3, Link, Activity, Shield, UserCircle, Settings
 } from 'lucide-vue-next';
 import { useRoute } from 'vue-router';
 

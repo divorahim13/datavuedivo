@@ -1,14 +1,8 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
 import { useDashboardStore } from '../../stores/dashboard';
-import { Search, Bell, Filter, Plus, Calendar, Settings, DownloadCloud } from 'lucide-vue-next';
-import type { FilterType } from '../../types/dashboard';
+import { Search, Bell, Plus, Calendar, DownloadCloud } from 'lucide-vue-next';
 
-const route = useRoute();
 const store = useDashboardStore();
-
-const pageTitle = computed(() => route.meta.title as string || 'Overview');
 </script>
 
 <template>
@@ -37,7 +31,7 @@ const pageTitle = computed(() => route.meta.title as string || 'Overview');
           <Plus class="w-4 h-4" />
         </button>
       </div>
-
+  
       <div class="w-px h-6 bg-[#e5e7eb] hidden md:block"></div>
 
       <!-- Filters & Toggles -->

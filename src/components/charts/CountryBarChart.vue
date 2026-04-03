@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import VChart from 'vue-echarts';
 import { use } from 'echarts/core';
 import { CanvasRenderer } from 'echarts/renderers';
@@ -15,7 +15,7 @@ const props = defineProps<{
   loading?: boolean;
 }>();
 
-const chartRef = ref<InstanceType<typeof VChart> | null>(null);
+
 
 const topProducts = computed(() => {
   if (!props.data) return [];
@@ -117,7 +117,7 @@ const chartOption = computed(() => ({
       <div class="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
     </div>
     <div v-else class="w-full flex-1 min-h-[300px]">
-      <VChart ref="chartRef" :option="chartOption" autoresize />
+      <VChart :option="chartOption" autoresize />
     </div>
   </div>
 </template>
